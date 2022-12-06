@@ -5,12 +5,8 @@ namespace TheBulletin.Services
     internal class UnitOfWork
     {
         private readonly AppDbContext _context;
-
-
         private UserRepository? _userRepo;
         private ChatRepository? _chatRepo;
-
-
 
         public UnitOfWork(AppDbContext context)
         {
@@ -40,7 +36,6 @@ namespace TheBulletin.Services
                 return _chatRepo;
             }
         }
-
 
         public void SaveChanges()
         {

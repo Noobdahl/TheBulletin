@@ -9,16 +9,10 @@ namespace TheBulletin.Services
     {
         private readonly AppDbContext _context;
 
-
-
         public ChatRepository(AppDbContext context)
         {
             _context = context;
         }
-
-
-
-
 
         //Get all messages by room
         public List<Message> GetAllMessagesByRoom(int roomId)

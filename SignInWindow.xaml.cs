@@ -23,6 +23,19 @@ namespace TheBulletin
             {
                 UnitOfWork uow = new(context);
 
+                //User? cUser = uow.UserRepo.LoginAuth(tbName.Text, pbPassword.Password);
+
+                //if (cUser != null)
+                //{
+                //    ChatWindow chatWindow = new(cUser.UserId);
+                //    chatWindow.Owner = this;
+                //    chatWindow.Show();
+                //    this.Hide();
+                //}
+                //else
+                //    MessageBox.Show("User or password incorrecto!");
+
+
                 User? cUser = uow.UserRepo.GetUserByName(tbName.Text);
                 if (cUser != null)
                     if (cUser.Password == pbPassword.Password)
